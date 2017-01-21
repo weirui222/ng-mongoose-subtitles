@@ -1,5 +1,6 @@
 body{
   padding-top: 70px;
+  background-color: rgb(120,120,120);
 }
 
 .container{
@@ -17,23 +18,20 @@ body{
   bottom: 0;
 
   color: white;
-  font-size: 4vmin;
-  padding-bottom: 60px;
+  font-size: 3vmin;
+  padding-bottom: 3vmin;
 }
 
 .subtitle-edit-container{
-  height: 50vmin;
+  height: 100vmin;
   overflow: scroll;
 }
-/*
-@media (min-width: 1200px){
-  .container {
-    width: 100%;
-  }
-}
 
-@media (min-width: 992px){
-  .container {
-    width: 100%;
+
+@media (max-width: 992px){
+  .subtitle-edit-container{
+    height: 50vh;
+    overflow: scroll;
   }
-}*/
+
+}
