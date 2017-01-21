@@ -1,16 +1,11 @@
-body {
-  background-color: black;
+body{
+  padding-top: 70px;
 }
-
 .container video {
   width: 100%;
   display: relative;
 }
 
-/*
-Stretch the subtitles to fill the full width
-and be placed at the bottom of the movie.
- */
 .subtitles {
   position: absolute;
   left: 0;
@@ -20,4 +15,9 @@ and be placed at the bottom of the movie.
   color: white;
   font-size: 24pt;
   padding-bottom: 60px;
+}
+
+.subtitle-edit-container{
+  height: 350px;
+  overflow: scroll;
 }
