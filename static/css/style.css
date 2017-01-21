@@ -1,6 +1,10 @@
 body{
   padding-top: 70px;
 }
+
+.container{
+  width: 100%
+}
 .container video {
   width: 100%;
   display: relative;
@@ -13,11 +17,23 @@ body{
   bottom: 0;
 
   color: white;
-  font-size: 24pt;
+  font-size: 4vmin;
   padding-bottom: 60px;
 }
 
 .subtitle-edit-container{
-  height: 350px;
+  height: 50vmin;
   overflow: scroll;
 }
+/*
+@media (min-width: 1200px){
+  .container {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px){
+  .container {
+    width: 100%;
+  }
+}*/
