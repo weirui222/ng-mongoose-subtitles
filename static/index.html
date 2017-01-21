@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Subtitles</title>
+    <base href="/">
+
+    <!-- Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.0-rc.1/angular-ui-router.js"></script>
+
+    <!-- Main App Script -->
+    <script src="app/app.js"></script>
+    <script src="app/containers/home/home.js"></script>
+    <script src="app/containers/watch/watch.js"></script>
+    <script src="app/components/video/video.js"></script>
+    <script src="app/containers/edit/edit.js"></script>
+
+     <!-- Containers / Pages -->
+     <!-- <script src="app/containers/home/home.js"></script>
+     <script src="app/containers/watch/watch.js"></script>
+     <script src="app/containers/edit/edit.js"></script> -->
 
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
@@ -19,31 +36,23 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  <body>
+
+  <body ng-app="App">
+    <header>
+      <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a ui-sref="homeState()">Subtvtle</a></li>
+        <li role="presentation"><a ui-sref="watchState()">Watch</a></li>
+        <li role="presentation"><a ui-sref="editState()">Edit</a></li>
+      </ul>
+    </header>
+
     <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="subtitles text-center">
-            <div class="row">
-              <div class="col-xs-12">
-                  <span id="line1">hello, my good sirs.</span>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-xs-12">
-                  <span id="line2">hello, my good sirs.</span>
-              </div>
-            </div>
-          </div>
-          <video src="video/Downfall.mkv" controls autoplay></video>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-12">
-          <span id="time"></span>
-        </div>
-      </div>
+      <div ui-view></div>
     </div>
+
+
+
+
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -55,7 +64,7 @@
     <script src="subtitles/rushmore-en.js"></script>
     <script src="subtitles/primer-en.js"></script>
     -->
-    <script src="/js/downfall.js"></script>
-    <script src="/js/main.js"></script>
+    <!-- <script src="/js/downfall.js"></script>
+    <script src="/js/main.js"></script> -->
   </body>
 </html>
