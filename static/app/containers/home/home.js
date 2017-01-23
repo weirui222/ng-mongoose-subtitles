@@ -7,15 +7,10 @@ angular.module('App')
 
 function HomeCompCtrl(ScriptService) {
 
-  //use static data for test
-    //static test data
-
     var homeComp = this;
     homeComp.titles = [];
     //this is where you would get the things from the db
-    //TODO: require the services in the function and below
     homeComp.titles = ScriptService.getTitles();
-    
 
     // homeComp.titles = [
     //   {
