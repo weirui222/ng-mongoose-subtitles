@@ -6,6 +6,7 @@ angular.module('App')
 });
 
 function HomeCompCtrl() {
+  //use static data for test
 
 }
 
