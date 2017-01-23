@@ -80,10 +80,16 @@ var ORIGINAL = [
   },
 ]
 
+models.Subtitle.findOne({
+  title: "original"
+}, function(err, original) {
+  if (!original) {
+    models.Subtitle.create({
+      title: "original",
+      subtitles: ORIGINAL
+      }, function(err, subtitle) {
 
-models.Subtitle.create({
-  title: "original",
-  subtitles: ORIGINAL
-}, function(err, subtitle) {
-
-})
+      }
+    );
+  }
+});
