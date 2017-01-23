@@ -18,11 +18,11 @@ angular.module('App', ['ui.router'])
     })
     .state('watchState', {
       url: '/watch/:id',
-      component: 'watchComp'
+      templateUrl: '/app/containers/watch/watch.html'
     })
     .state('editState', {
       url: '/edit/:id',
-      component: 'editComp'
+      templateUrl: '/app/containers/watch/watch.html'
     })
     .state('creditState', {
       url: '/credit',
