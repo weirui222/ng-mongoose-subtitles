@@ -5,7 +5,7 @@ angular.module('App')
   controllerAs: 'homeComp'
 });
 
-function HomeCompCtrl() {
+function HomeCompCtrl(ScriptService) {
     //static test data
 
 
@@ -15,30 +15,32 @@ function HomeCompCtrl() {
     //TODO: require the services in the function and below
     //Service.getSubtitles().then();
 
-    homeComp.titles = [
-      {
-        "_id":'1',
-        "title": "Original"
-      },
-      {
-        "_id":'2',
-        "title": "WDI 11"
-      },
-      {
-        "_id":'3',
-        "title": "Blue"
-      },
-      {
-        "_id":'4',
-        "title": "Red"
-      },
-      {
-        "_id":'5',
-        "title": "Grey"
-      },
+    // homeComp.titles = [
+    //   {
+    //     "_id":'1',
+    //     "title": "Original"
+    //   },
+    //   {
+    //     "_id":'2',
+    //     "title": "WDI 11"
+    //   },
+    //   {
+    //     "_id":'3',
+    //     "title": "Blue"
+    //   },
+    //   {
+    //     "_id":'4',
+    //     "title": "Red"
+    //   },
+    //   {
+    //     "_id":'5',
+    //     "title": "Grey"
+    //   },
+    //
+    // ];
 
-    ];
+    homeComp.titles = ScriptService.getTitles();
 
 }
 
-HomeCompCtrl.$inject = [];
+HomeCompCtrl.$inject = ['ScriptService'];
