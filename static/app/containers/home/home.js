@@ -8,7 +8,10 @@ angular.module('App')
 function HomeCompCtrl(ScriptService) {
     var homeComp = this;
     homeComp.scripts = [];
-    homeComp.scripts = ScriptService.getTitles();
+    ScriptService.getTitles().then(function(scripts) {
+      console.log("got scripts:", scripts);
+      homeComp.scripts = scripts;
+    });
 }
 
 HomeCompCtrl.$inject = ['ScriptService'];

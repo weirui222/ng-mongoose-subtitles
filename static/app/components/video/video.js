@@ -8,11 +8,12 @@ angular.module('App')
 function VideoCompCtrl($element, $interval, $stateParams, ScriptService){
   var videoComp = this;
   
-  console.log("params:", $stateParams);
-
   // GET THE SUBTITLES
   videoComp.script = [];
-  videoComp.script = ScriptService.getScript();
+  ScriptService.getScript($stateParams.id).then(function(script) {
+    console.log("SCRIPT", script);
+    videoComp.script = script;
+  });
 
   // GET THE MOVIE
   var video = $element.find('video')[0];
@@ -34,8 +35,8 @@ function VideoCompCtrl($element, $interval, $stateParams, ScriptService){
   }
 
   function findSubtitle(time) {
-    for (var i = 0; i < videoComp.script.length; i++) {
-      var subtitle = videoComp.script[i];
+    for (var i = 0; i < videoComp.script.subtitles.length; i++) {
+      var subtitle = videoComp.script.subtitles[i];
       if (isTimeInDuration(time, subtitle)) {
         return subtitle;
       }
