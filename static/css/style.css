@@ -23,6 +23,10 @@ body{
   padding-bottom: 3vmin;
 }
 
+.line1Box, .line2Box{
+  word-break: break-all;
+}
+
 .subtitle-edit-container{
   height: 100vmin;
   overflow-y: scroll;
