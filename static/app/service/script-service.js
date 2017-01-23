@@ -1,21 +1,24 @@
 angular.module('App')
 .factory('ScriptService', ScriptService);
 
-function Subtitle($http) {
+function ScriptService($http) {
 	return {
+		
     getTitles: function() {
       var req = {
         url: '/movie/',
         method: 'GET'
-      }
+      };
       // return $http(req);
-      return ["Blank", "WDI 11", "SeaHawks"]
-    }
-	  getScript: function(index) {
+      return ["Blank", "WDI 11", "SeaHawks"];
+    },
+
+	  getScript: function() {
+			// will need to add index in request param
 	    var req = {
-	      url: '/movie/script/' + index,
+	      url: '/movie/script/',
 	      method: 'GET'
-	    }
+	    };
 	    // return $http(req);
       return {
         title: "WDI 11",
@@ -94,18 +97,19 @@ function Subtitle($http) {
             duration: "00:01:25,700 --> 00:01:28,300",
             line1: "Where are you from?",
             line2: "-From Fulda."
-          },
+          }
         ]
       }
-	  }
+	  },
+
     createScript: function(index) {
 	    var req = {
 	      url: '/movie/create/script/' + index,
 	      method: 'POST'
 	    }
 	    return $http(req);
-	  }
-	}
+	  },
+
 	  editScript: function(index) {
 	    var req = {
 	      url: '/movie/edit/script/' + index,
@@ -113,6 +117,7 @@ function Subtitle($http) {
 	    }
 	    return $http(req);
 	  }
+
 	}
 }
 
