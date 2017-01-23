@@ -2,6 +2,7 @@ body {
   padding-top: 70px;
   background-color: rgb(120,120,120);
   color: white;
+  margin: 0 25px;
 }
 
 .container {
@@ -28,7 +29,7 @@ body {
 }
 
 .subtitle-edit-container {
-  height: 70vmin;
+  height: 76vmin;
   overflow-y: scroll;
   overflow-x: hidden;
   padding-right: 6px;
@@ -37,7 +38,7 @@ body {
 }
 
 .inner-shadow {
-  width: 92%;
+  width: 90%;
   height: 5%;
   position: absolute;
   bottom: 0px;
@@ -54,9 +55,25 @@ input[name=line1] {
   font-size: 15px;
 }
 
+.navbar-fixed-top {
+  padding-left: 25px;
+}
+
 .navbar a {
   transition-property: color;
   transition-duration: 300ms;
+}
+
+.navbar-header {
+  padding-bottom: 10px;
+}
+
+#navbar-collapse-div {
+  padding-top: 6px;
+}
+
+#brand-logo {
+  width: 110px;
 }
 
 
@@ -65,7 +82,6 @@ input[name=line1] {
 #script-links {
   width: 500px;
   max-width: 84%;
-  margin-left: 30px;
 }
 
 .scripts-hr {
@@ -121,7 +137,6 @@ input[name=line1] {
 
 #script-links li {
   list-style: none;
-  padding-left: 20px;
   cursor: pointer;
   padding-left: 25px;
 }
