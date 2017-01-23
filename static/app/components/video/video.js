@@ -5,8 +5,10 @@ angular.module('App')
   controllerAs: 'videoComp'
 });
 
-function VideoCompCtrl($element, $interval, ScriptService){
+function VideoCompCtrl($element, $interval, $stateParams, ScriptService){
   var videoComp = this;
+  
+  console.log("params:", $stateParams);
 
   // GET THE SUBTITLES
   videoComp.script = [];
@@ -75,4 +77,4 @@ function VideoCompCtrl($element, $interval, ScriptService){
 
 }
 
-VideoCompCtrl.$inject = ['$element', '$interval', 'ScriptService'];
+VideoCompCtrl.$inject = ['$element', '$interval', '$stateParams', 'ScriptService'];

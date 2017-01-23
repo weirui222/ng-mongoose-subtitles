@@ -10,7 +10,11 @@ function ScriptService($http) {
         method: 'GET'
       };
       // return $http(req);
-      return ["Blank", "WDI 11", "SeaHawks"];
+      return [
+				{_id: 1, title: "Blank"},
+				{_id: 2, title: "WDI 11"},
+				{_id: 3, title: "SeaHawks"}
+			];
     },
 
 	  getScript: function(id) {
@@ -21,6 +25,7 @@ function ScriptService($http) {
 	    };
 	    // return $http(req);
       return {
+				_id: 1,
         title: "WDI 11",
         subtitle: [
           {
