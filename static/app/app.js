@@ -29,6 +29,8 @@ angular.module('App', ['ui.router'])
       component: 'creditComp'
     })
 
+    THIS IS BOGUS CATCH IT!
+
     //Removes # symbol for our routes
     $locationProvider.html5Mode(true);
 
