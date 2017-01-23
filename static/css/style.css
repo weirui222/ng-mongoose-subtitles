@@ -23,13 +23,16 @@ body{
   padding-bottom: 3vmin;
 }
 
+.line1Box{
+  word-break: break-all;
+}
+
 .subtitle-edit-container{
   height: 100vmin;
   overflow-y: scroll;
   overflow-x: hidden;
   padding-right: 6px;
 }
-
 
 @media (max-width: 992px){
   .subtitle-edit-container{
