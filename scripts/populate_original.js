@@ -78,7 +78,7 @@ var ORIGINAL = [
     line1: "Where are you from?",
     line2: "-From Fulda."
   },
-]
+];
 
 models.Subtitle.findOne({
   title: "original"

@@ -8,7 +8,9 @@ var app = express();
 app.use(express.static(path.join(__dirname, 'static')));
 app.use(bodyParser.urlencoded({ extended: false }));
 
-// mongoose.connect('/mongodb://localhost/moviesub');
+app.use('/movie', require('./controllers/movies'));
+
+// mongoose.connect('/mongodb://localhost/subtitles');
 
 app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'static/index.html'));
