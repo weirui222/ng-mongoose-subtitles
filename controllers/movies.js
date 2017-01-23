@@ -43,3 +43,5 @@ router.route('/create/script/:templateId')
 })
 
 // PUT /movie/edit/script/:index
+
+module.exports = router;
