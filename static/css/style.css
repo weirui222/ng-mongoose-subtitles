@@ -76,6 +76,41 @@ input[name=line1] {
   width: 110px;
 }
 
+/*** VIDEO STYLING ***/
+
+#video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#edit-buttons {
+  padding-bottom: 15px;
+}
+
+#edit-buttons form {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+#edit-buttons button, input {
+  background-color: #222;
+  border-radius: 4px;
+  border: none;
+  padding: 4px 8px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+  letter-spacing: 1px;
+  transition-property: background-color;
+  transition-duration: 300ms;
+}
+
+#edit-buttons button:hover {
+  background-color: #333;
+}
+
 
 /*** HOMEPAGE STYLING ***/
 
