@@ -55,3 +55,7 @@ input[name=line1] {
   }
 
 }
+
+.home-page-links .link a {
+  color: white;
+}
