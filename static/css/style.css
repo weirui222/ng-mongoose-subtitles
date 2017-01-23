@@ -23,7 +23,7 @@ body{
   padding-bottom: 3vmin;
 }
 
-.line1Box .line2Box{
+.line1Box, .line2Box{
   word-break: break-all;
 }
 
