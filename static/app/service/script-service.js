@@ -110,9 +110,9 @@ function ScriptService($http) {
 	    return $http(req);
 	  },
 
-	  editScript: function(index) {
+	  editScript: function(script) {
 	    var req = {
-	      url: '/movie/edit/script/' + index,
+	      url: '/movie/edit/script/' + script._id,
 	      method: 'PUT'
 	    }
 	    return $http(req);
