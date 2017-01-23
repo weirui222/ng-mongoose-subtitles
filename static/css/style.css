@@ -1,6 +1,7 @@
 body{
   padding-top: 70px;
   background-color: rgb(120,120,120);
+  color: white;
 }
 
 .container{
@@ -15,7 +16,7 @@ body{
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 15px;
 
   color: white;
   font-size: 3vmin;
@@ -24,7 +25,9 @@ body{
 
 .subtitle-edit-container{
   height: 100vmin;
-  overflow: scroll;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 6px;
 }
 
 
