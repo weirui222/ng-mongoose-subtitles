@@ -30,6 +30,19 @@ body{
   padding-right: 6px;
 }
 
+input[name=line1] {
+   margin-bottom: 9px;
+}
+
+.panel-title {
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.navbar a {
+  transition-property: color;
+  transition-duration: 300ms;
+}
 
 @media (max-width: 992px){
   .subtitle-edit-container{
