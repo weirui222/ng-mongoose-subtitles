@@ -1,6 +1,11 @@
-<h1>Choose a script to display</h1>
-<div class="" ng-repeat="title in homeComp.titles">
-    <ul>
-        <li ui-sref="watchState(title.id)">{{title.title}}</li>
+<div id="script-links">
+	<h1>Choose a script to display</h1>
+	<hr class="scripts-hr hr-thick">
+    <ul ng-repeat="title in homeComp.titles" class="scripts-list">
+    	<div ui-sref="watchState(title.id)" class="script-link">
+	        <li>{{title.title}}</li>
+	        <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+        </div>
+    	<hr class="scripts-hr">
     </ul>
 </div>
