@@ -24,6 +24,10 @@ angular.module('App', ['ui.router'])
       url: '/edit',
       component: 'editComp'
     })
+    .state('creditState', {
+      url: '/credit',
+      component: 'creditComp'
+    })
 
     //Removes # symbol for our routes
     $locationProvider.html5Mode(true);
