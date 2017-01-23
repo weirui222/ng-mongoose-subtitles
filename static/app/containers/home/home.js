@@ -6,14 +6,11 @@ angular.module('App')
 });
 
 function HomeCompCtrl(ScriptService) {
-    //static test data
-
 
     var homeComp = this;
     homeComp.titles = [];
     //this is where you would get the things from the db
-    //TODO: require the services in the function and below
-    //Service.getSubtitles().then();
+    homeComp.titles = ScriptService.getTitles();
 
     // homeComp.titles = [
     //   {
@@ -38,8 +35,6 @@ function HomeCompCtrl(ScriptService) {
     //   },
     //
     // ];
-
-    homeComp.titles = ScriptService.getTitles();
 
 }
 

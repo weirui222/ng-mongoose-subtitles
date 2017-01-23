@@ -3,7 +3,7 @@ angular.module('App')
 
 function ScriptService($http) {
 	return {
-		
+
     getTitles: function() {
       var req = {
         url: '/movie/',
