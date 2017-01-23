@@ -1,20 +1,39 @@
+body{
+  padding-top: 70px;
+  background-color: rgb(120,120,120);
+}
 
+.container{
+  width: 100%
+}
 .container video {
   width: 100%;
   display: relative;
 }
 
-/*
-Stretch the subtitles to fill the full width
-and be placed at the bottom of the movie.
- */
 .subtitles {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 15px;
 
   color: white;
-  font-size: 24pt;
-  padding-bottom: 60px;
+  font-size: 3vmin;
+  padding-bottom: 3vmin;
+}
+
+.subtitle-edit-container{
+  height: 100vmin;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-right: 5px;
+}
+
+
+@media (max-width: 992px){
+  .subtitle-edit-container{
+    height: 50vh;
+    overflow: scroll;
+  }
+
 }
