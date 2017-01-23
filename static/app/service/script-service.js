@@ -13,7 +13,7 @@ function ScriptService($http) {
       return ["Blank", "WDI 11", "SeaHawks"];
     },
 
-	  getScript: function() {
+	  getScript: function(id) {
 			// will need to add index in request param
 	    var req = {
 	      url: '/movie/script/',
@@ -102,9 +102,9 @@ function ScriptService($http) {
       }
 	  },
 
-    createScript: function(index) {
+    createScript: function(templateId) {
 	    var req = {
-	      url: '/movie/create/script/' + index,
+	      url: '/movie/create/script/' + templateId,
 	      method: 'POST'
 	    }
 	    return $http(req);
