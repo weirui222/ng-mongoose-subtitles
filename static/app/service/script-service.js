@@ -41,15 +41,30 @@ function ScriptService($http) {
 	  },
 
 	  editScript: function(script) {
+			console.log(script);
 	    var req = {
 	      url: '/movie/edit/script/' + script._id,
 	      method: 'PUT',
-		  data: script
-	    }
+				data: {
+					script: script
+				}
+	    };
+	    return $http(req);
+	  },
+
+		newScript: function(script) {
+			console.log(script);
+	    var req = {
+	      url: '/movie/new/script',
+	      method: 'PUT',
+				data: {
+					script: script
+				}
+	    };
 	    return $http(req);
 	  }
 
-	}
+	};
 }
 
 ScriptService.$inject = ['$http'];
