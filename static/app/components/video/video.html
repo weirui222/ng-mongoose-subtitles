@@ -1,7 +1,26 @@
 <div class="row">
   <div class="col-md-8" ng-class="{'col-md-offset-2': !videoComp.editing}">
-      <h1>{{videoComp.script.title}}</h1>
-      <button ng-click="videoComp.editing = !videoComp.editing">Edit</button>
+
+      <div id="video-header">
+        <h1>{{videoComp.script.title}}</h1>
+        <div id="edit-buttons">
+
+          <button ng-click="videoComp.editing = !videoComp.editing" ng-hide="videoComp.editing" id="edit-video">
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+            Edit
+          </button>
+
+          <button ng-click="videoComp.editing = !videoComp.editing" ng-show="videoComp.editing" id="edit-video">
+            <i class="fa fa-ban" aria-hidden="true"></i>
+            Cancel
+          </button>
+
+          <form class="form-control" ng-show="videoComp.editing" ng-submit="videoComp.save()" id="edit-submit">
+            <input type="submit" value="Submit">
+          </form>
+
+        </div>
+      </div>
       <div class="subtitles text-center">
           <div class="row">
               <div class="col-xs-12 line1Box">
@@ -14,7 +33,9 @@
               </div>
           </div>
       </div>
-      <video src="video/Downfall.mkv" controls autoplay></video>
+      <div class="video-shadow">
+        <video class="video-shadow" src="video/Downfall.mkv" controls autoplay></video>
+      </div>
   </div>
 
   <div ng-show="videoComp.editing" class="col-md-4" id="subtitles-col">
