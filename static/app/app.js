@@ -27,6 +27,10 @@ angular.module('App', ['ui.router'])
     .state('creditState', {
       url: '/credit',
       component: 'creditComp'
+    })
+    .state('newState', {
+        url: '/new',
+        component: 'newComp'
     });
 
     //Removes # symbol for our routes
