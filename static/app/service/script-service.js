@@ -31,11 +31,12 @@ function ScriptService($http) {
 			});
 	  },
 
-    createScript: function(templateId) {
+    createScript: function(title, templateId) {
 	    var req = {
 	      url: '/movie/create/script/' + templateId,
-	      method: 'POST'
-	    };
+	      method: 'POST',
+		  data: title
+	  };
 	    return $http(req);
 	  },
 
