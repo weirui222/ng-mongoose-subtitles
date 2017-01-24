@@ -97,7 +97,7 @@ input[name=line1] {
   margin-left: 10px;
 }
 
-#edit-buttons button, input {
+#edit-buttons button, #edit-buttons input {
   display: flex;
   align-items: center;
   border-radius: 4px;
