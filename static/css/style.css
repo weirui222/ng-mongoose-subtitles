@@ -138,6 +138,16 @@ input[name=line1] {
   margin-right: 5px;
 }
 
+.video-shadow:before, .video-shadow:after {
+  position: absolute;
+  content: "";
+  top:110px; bottom:5px; left:60px; right:60px;
+  z-index: -1;
+  box-shadow: 0 0 40px 20px rgba(0,0,0,.4);
+  border-radius: 100px/20px; 
+}
+
+
 /*** HOMEPAGE STYLING ***/
 
 #script-links {
