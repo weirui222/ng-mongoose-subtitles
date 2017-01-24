@@ -55,4 +55,18 @@ router.route('/edit/script/:id')
 });
 
 
+// PUT /movie/new/script/:templateId
+router.route('/new/script')
+.put(function(req, res) {
+
+  models.Subtitle.create({
+    title: req.body.script.title,
+    subtitles: req.body.script.subtitles
+  },function(err, subtitle) {
+    console.log("error: ", err);
+  });
+
+});
+
+
 module.exports = router;
