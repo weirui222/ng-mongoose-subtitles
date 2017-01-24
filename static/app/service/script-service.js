@@ -40,7 +40,7 @@ function ScriptService($http) {
 	  },
 
 	  editScript: function(script) {
-			console.log(script);
+			console.log(script)
 	    var req = {
 	      url: '/movie/edit/script/' + script._id,
 	      method: 'PUT',
