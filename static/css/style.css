@@ -76,6 +76,71 @@ input[name=line1] {
   width: 110px;
 }
 
+/*** VIDEO STYLING ***/
+
+#video-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+#edit-buttons {
+  padding-bottom: 15px;
+  display: flex;
+}
+
+#edit-buttons form {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+#edit-buttons button, input {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: none;
+  padding: 4px 10px;
+  text-transform: uppercase;
+  font-weight: 500;
+  outline: none;
+  letter-spacing: 1px;
+}
+
+#edit-buttons button {
+  background-color: #787878;
+  color: black;
+  border: 2px solid black;
+  transition-property: border, color;
+  transition-duration: 300ms;
+}
+
+#edit-buttons button:hover {
+  border: 2px solid #444;
+  color: #444;
+}
+
+#edit-buttons form {
+  background-color: none;
+  margin-left: 10px;
+}
+
+#edit-buttons input {
+  background-color: #222;
+  padding: 7px 11px;
+  color: white;
+  transition-property: background-color;
+  transition-duration: 300ms;
+}
+
+#edit-buttons input:hover  {
+  background-color: #333;
+}
+
+#edit-buttons i {
+  margin-right: 5px;
+}
+
 
 /*** HOMEPAGE STYLING ***/
 
@@ -88,7 +153,7 @@ input[name=line1] {
   border: 0;
   clear: both;
   display: block;
-  width: 100%;               
+  width: 100%;
   background-color: #555;
   height: 1px;
   margin: 20px 0 0 0;
@@ -106,7 +171,7 @@ input[name=line1] {
   transition-duration: 300ms;
 }
 
-.scripts-list:hover { 
+.scripts-list:hover {
   background-color: #555;
   cursor: pointer;
 }
@@ -147,5 +212,9 @@ input[name=line1] {
     height: 50vh;
     overflow: scroll;
   }
+}
 
+#script-links a {
+  color: white;
+  text-decoration: none;
 }
