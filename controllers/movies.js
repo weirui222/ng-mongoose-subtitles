@@ -36,12 +36,23 @@ router.route('/script/:id')
 
 });
 
-// POST /movie/create/script/:templateId
-router.route('/create/script/:templateId')
-.post(function(req, res) {
+// PUT /movie/create/script/:templateId
+router.route('/edit/script/:id')
+.put(function(req, res) {
 
-})
+  models.Subtitle.findOne(
+    {"_id": req.params.id},
+    function(err, entry){
+      if(err){
+        console.log("error: ", err);
+      } else{
+        entry.subtitles = req.body.script.subtitles;
+        entry.save();
+      }
+    }
+  );
 
-// PUT /movie/edit/script/:index
+});
+
 
 module.exports = router;
