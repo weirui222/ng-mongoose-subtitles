@@ -29,7 +29,7 @@ body {
 }
 
 .subtitle-edit-container {
-  height: 76vmin;
+  height: 85vmin;
   overflow-y: scroll;
   overflow-x: hidden;
   padding-right: 6px;
@@ -93,6 +93,8 @@ input[name=line1] {
   margin: 0;
   padding: 0;
   border: none;
+  background-color: none;
+  margin-left: 10px;
 }
 
 #edit-buttons button, input {
@@ -112,17 +114,12 @@ input[name=line1] {
   color: black;
   border: 2px solid black;
   transition-property: border, color;
-  transition-duration: 300ms;
+  transition-duration: 600ms;
 }
 
 #edit-buttons button:hover {
-  border: 2px solid #444;
-  color: #444;
-}
-
-#edit-buttons form {
-  background-color: none;
-  margin-left: 10px;
+  border: 2px solid #ddd;
+  color: #ddd;
 }
 
 #edit-buttons input {
@@ -140,7 +137,6 @@ input[name=line1] {
 #edit-buttons i {
   margin-right: 5px;
 }
-
 
 /*** HOMEPAGE STYLING ***/
 
